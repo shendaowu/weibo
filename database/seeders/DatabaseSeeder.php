@@ -20,5 +20,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Model::unguard();
+
+        $this->call(UsersTableSeeder::class);
+
+        Model::reguard();
     }
 }
